@@ -1,0 +1,16 @@
+Download sample and do the following
+
+csv = require "csv"
+data = csv.read('sample.csv')
+
+-- Reading --
+for i=1,#data do
+    for j=1,#data[i] do
+        print(data[i][j])
+    end
+    print('\n')
+end
+
+-- Writing --
+data[2][1] = 'update'
+csv.write('sample2.csv',data)
